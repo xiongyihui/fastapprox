@@ -44,3 +44,19 @@ def fast_pow(float x, float p):
 
 def faster_pow(float x, float p):
     return fasterpow(x, p)
+
+cdef extern from "fast_sqrt.h":
+
+    float q_sqrt(float x)
+    float x_sqrt(float x)
+    float h_sqrt(float x)
+
+
+def qsqrt(float x):
+    return q_sqrt(x)
+
+def xsqrt(float x):
+    return x_sqrt(x)
+
+def hsqrt(float x):
+    return h_sqrt(x)
